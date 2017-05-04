@@ -1,6 +1,6 @@
 <?php
 
-class ListField extends BaseField {
+class TaglistField extends BaseField {
 
   public $type = 'text';
   public $min  = 0;
@@ -32,7 +32,7 @@ class ListField extends BaseField {
     ));
 
     if(!is_array($value)) {
-      $input->val(html($value, false));
+      $input->val($value);
     }
 
     if($this->readonly()) {
@@ -70,14 +70,14 @@ class ListField extends BaseField {
   public function result() {
 
     $result = parent::result();
-    return yaml::encode($result);
+    return implode(',', $result);
 
   }
 
   public function value() {
 
     $value = parent::value();
-    return yaml::decode($value);
+    return explode(',', $value);
     
   }
 
