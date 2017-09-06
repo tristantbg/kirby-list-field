@@ -32,7 +32,7 @@ class TaglistField extends BaseField {
     ));
 
     if(!is_array($value)) {
-      $input->val($value);
+      $input->val($value, false);
     }
 
     if($this->readonly()) {
