@@ -7,3 +7,8 @@
   pointer-events: auto;
   cursor: move;
 }
+
+.list-field .list-item.is-readonly{
+  pointer-events: none;
+  cursor: default;
+}

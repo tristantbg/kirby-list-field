@@ -16,5 +16,5 @@
       </div>
     <?php endforeach ?>
   </div>
-  <input class="input add-input" type="text"  placeholder="<?php echo $field->i18n($field->placeholder())?>">
+  <input class="input add-input" type="text" placeholder="<?php echo $field->i18n($field->placeholder())?>">
 </div>

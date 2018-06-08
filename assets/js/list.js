@@ -39,11 +39,14 @@
       })
     })
 
+    if($(element).find('.list .input').hasClass('input-is-readonly')) {
+      $(element).find('.add-input').hide();
+      return;
+    }
+    
     $(element).find('.list').sortable({
       handle: '.sortable-handle'
     });
-
-    if($(element).find('.list .input').hasClass('input-is-readonly')) $(element).find('.add-input').hide()
 
   };
 
