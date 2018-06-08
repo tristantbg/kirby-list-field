@@ -43,6 +43,8 @@
       handle: '.sortable-handle'
     });
 
+    if($(element).find('.list .input').hasClass('input-is-readonly')) $(element).find('.add-input').hide()
+
   };
 
   var setCursorToEnd = function(element){
